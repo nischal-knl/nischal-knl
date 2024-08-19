@@ -1,0 +1,9 @@
+first of all, copy the db.sql file and run it on xammp. 
+
+then open the project and select admin?login 
+
+type in username- admin
+password- admin 123
+
+then go to add teacher and add teachers to the faculty. 
+then, you can use the teacher you added to login and add results to the student you registered into the system.
