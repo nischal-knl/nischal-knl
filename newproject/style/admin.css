@@ -1,0 +1,124 @@
+
+body {
+ margin: 0;
+ padding: 0;
+ font-family: sans-serif;
+}
+
+.container {
+ display: flex;
+ height: 100vh; /* added to make the container full height */
+}
+
+.sidebar {
+ width: 200px;
+ background-color: #8988CE; /* updated to a darker clay color */
+ padding: 20px;
+ height: 100%; /* added to make the sidebar full height */
+}
+
+.sidebar h2 {
+ margin-bottom: 20px;
+}
+
+.sidebar a {
+ display: block;
+ padding: 10px;
+ color: #333;
+ text-decoration: none;
+ border-bottom: 1px solid #ddd;
+}
+
+.sidebar a:hover {
+ background-color: #eee;
+}
+
+.content {
+ flex: 1;
+ padding: 20px;
+ overflow-y: auto; /* added to make the content area scrollable */
+}
+
+.content h2 {
+ margin-bottom: 20px;
+}
+
+.dashboard {
+ border-bottom: 1px solid #ddd; /* added a border to separate dashboard from cards */
+ padding-bottom: 20px;
+ margin-bottom: 20px;
+}
+
+.cards {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap; /* added to wrap cards to the next line */
+}
+
+.card {
+ width: 20%;
+ background-color: #DEE7F5; /* added a light gray background color */
+ border-radius: 5px;
+ padding: 30px; /* increased padding to make cards taller */
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ cursor: pointer;
+ text-align: center;
+ margin: 20px; /* added margin to create space between cards */
+ height: 140px; /* added a fixed height to make cards taller */
+}
+
+.card h3 {
+ margin-bottom: 10px;
+}
+
+.card p {
+ margin-bottom: 0;
+}
+#student-table {
+ border-collapse: collapse;
+ width: 100%;
+}
+
+#student-table th, #student-table td {
+ border: 1px solid #ddd;
+ padding: 10px;
+ text-align: left;
+}
+
+#student-table th {
+ background-color: #f0f0f0;
+}
+.content {
+ flex: 1;
+ padding: 20px;
+ overflow-y: auto; /* added to make the content area scrollable */
+ display: flex; /* added to make the content area a flex container */
+ flex-direction: column; /* added to stack the cards and table vertically */
+}
+
+.cards {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap; /* added to wrap cards to the next line */
+ margin-bottom: 20px; /* added to create space between cards and table */
+}
+
+#table-container {
+ overflow-x: auto; /* added to make the table horizontally scrollable */
+}
+
+#student-table {
+ border-collapse: collapse;
+ width: 100%;
+ margin: 0 auto; /* added to center the table horizontally */
+}
+
+#student-table th, #student-table td {
+ border: 1px solid #ddd;
+ padding: 10px;
+ text-align: left;
+}
+
+#student-table th {
+ background-color: #f0f0f0;
+}

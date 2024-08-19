@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="stu-signup.css">
+</head>
+<body>
+    <div class="signup">
+        <h1>Student Registration</h1>
+        <form id="register-form" action="register_stu.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="rollno">Roll No:</label>
+            <input type="text" id="rollno" name="rollno" required><span id="rollno-error" class="error"></span><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="faculty">Faculty:</label>
+            <select id="faculty" name="faculty" required>
+                <option value="">Select Faculty</option>
+                <option value="Science">Science</option>
+                <option value="Arts">Arts</option>
+                <option value="Engineering">Engineering</option>
+            </select><br><br>
+            <input type="submit" value="Register">
+        </form><br>
+        <a href="stud_login.php">Already have an account? Login</a>
+        <script href = "signup_script.js"></script>
+        <script>
+            const form = document.getElementById('register-form');
+            const rollnoInput = document.getElementById('rollno');
+            const rollnoError = document.getElementById('rollno-error');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const rollno = rollnoInput.value;
+                const password = document.getElementById('password').value;
+                const faculty = document.getElementById('faculty').value;
+
+                if (username === '' || email === '' || rollno === '' || password === '' || faculty === '') {
+                    alert('Please fill in all the fields');
+                    return;
+                }
+
+                // Check for duplicate roll no using AJAX
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'check-student.php?rollno=' + rollno, true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        const response = xhr.responseText;
+                        if (response === 'true') {
+                            rollnoError.textContent = 'Roll No already exists';
+                        } else {
+                            form.submit();
+                        }
+                    }
+                };
+                xhr.send();
+            });
+        </script>
+    </div>
+</body>
+</html>

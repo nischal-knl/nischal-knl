@@ -1,0 +1,97 @@
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f0f0f0;
+			font-family: 'Arial';
+		}
+		
+		.signup {
+			width: 382px;
+			overflow: hidden;
+			margin: auto;
+			margin: 20 0 0 450px;
+			padding: 80px;
+			background-color: #f0f0f0;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.signup label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		.signup input[type="text"],
+		.signup input[type="email"],
+		.signup input[type="password"],
+		.signup input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+			border: 1px solid #ccc;
+		}
+		
+		.signup input[type="button"] {
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.signup input[type="button"]:hover {
+			background-color: #0056b3;
+		}
+		
+		.signup input[type="checkbox"] {
+			margin-top: 10px;
+		}
+		
+		.signup span {
+			font-size: 14px;
+			color: #e62329;
+			cursor: pointer;
+		}
+		
+		.signup span:hover {
+			text-decoration: underline;
+		}
+		
+		.signup p {
+			margin-top: 20px;
+			font-size: 14px;
+			color: #007bff;
+		}
+		
+		.signup p a {
+			text-decoration: none;
+			color: #007bff;
+		}
+		
+		.signup p a:hover {
+			text-decoration: underline;
+			color: #0066cc;
+		}
+		
+		.signup p a:active {
+			color: #0055a5;
+		}
+		.signup input[type="submit"] {
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.signup input[type="submit"]:hover {
+			background-color: #0056b3;
+		}
+        
